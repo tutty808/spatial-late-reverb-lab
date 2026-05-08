@@ -1,36 +1,41 @@
-# spatial-late-reverb-lab
+# Spatial Late Reverberation Lab
 
-This repository is a research-oriented Python project for analyzing, generating, and replacing late reverberation in room impulse responses.
+This repository is a research-oriented Python project for analyzing, synthesizing, replacing, and controlling spatial late reverberation in room impulse responses.
 
-The long-term goal is to study how late reverberation can be controlled by changing parameters such as decay time, energy distribution, and binaural correlation.
+The purpose is to investigate which physical properties of late reverberation should be preserved or controlled when generating or replacing late reverberation.
 
-## Motivation
+## Research Direction
 
-This project is related to my master's research on late reverberation generation and replacement using binaural or spatial room impulse responses.
+Late reverberation is not only a decaying tail in time.  
+In spatial and binaural room impulse responses, it also includes directional energy distribution, frequency-dependent decay, interaural correlation, and diffuseness.
 
-Late reverberation is important for perceived reverberance, spaciousness, and the impression of an acoustic space.  
-This project aims to build a reproducible implementation for modifying late reverberation and evaluating the resulting changes.
+This project explores how these properties can be analyzed, modified, and evaluated.
 
-## Current Goal
+## Current Questions
 
-The first goal is to build a simple analysis pipeline that:
+- Is matching the energy decay curve sufficient for late reverberation replacement?
+- How important is directional energy distribution in late reverberation?
+- How does interaural correlation affect the perceived spatial impression?
+- Can late reverberation be simplified while preserving important perceptual properties?
+- Which objective metrics are useful for evaluating modified late reverberation?
 
-1. loads a room impulse response,
-2. separates early and late parts,
-3. computes the energy decay curve,
-4. estimates reverberation time,
-5. compares original and generated late reverberation.
+## Initial Implementation Goals
 
-## Planned Features
+1. Load RIR / BRIR / SRIR data.
+2. Separate early and late parts.
+3. Compute energy decay curves.
+4. Estimate reverberation time.
+5. Generate synthetic late reverberation.
+6. Replace the original late part.
+7. Compare original and modified responses using objective metrics and listening examples.
 
-- RIR / BRIR / SRIR loading
-- Early and late reverberation separation
-- Energy decay curve calculation
-- T20 / T60 estimation
-- Late reverberation synthesis
-- Late reverberation replacement
+## Planned Extensions
+
 - Directional energy control
+- Direction-dependent decay control
+- Frequency-dependent decay control
 - Binaural metrics such as IACC
+- Diffuseness or spatial coherence analysis
 - PyTorch-based parameter optimization
 
 ## Status
