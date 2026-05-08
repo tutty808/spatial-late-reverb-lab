@@ -1,4 +1,4 @@
-# Directional Late Reverberation Lab
+# spatial-late-reverb-lab
 
 This repository is a research-oriented Python project for analyzing, generating, and replacing late reverberation in room impulse responses.
 
